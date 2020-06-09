@@ -21,7 +21,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-
 	font: inherit;
     vertical-align: baseline;
 
@@ -77,7 +76,6 @@ header nav{
     display: flex;
     font-size: 1.6rem;
     width: 40%;
-
     align-items: stretch;
 
 }
@@ -115,7 +113,7 @@ section{
     width: 60%;
 }
 #image h2{
-    font-size: 10rem;
+    font-size: 5vw;
     text-align: center;
     color: white;
     font-family: 'Bungee Outline', cursive;
@@ -165,4 +163,44 @@ button{
     width: 100%;
     font-size: 2em;
     text-align: center;
+}
+
+@media (max-width: 800px) {
+    header{ 
+        width: 100%;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    header nav a{
+        width: 100%; 
+    }
+    header p {
+        width:90%;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    #list{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #list div{
+        width:45%;
+        max-height: 200px;
+    }
+    #list #content{
+        font-size: 1.6rem;
+        width: 90%;
+    }
+
+}
+@media (max-width: 500px) {
+    #list div{
+        width:45%;
+        max-height: 150px;
+    }
+    #list #content{
+        font-size: 1.2rem;
+    }
 }
