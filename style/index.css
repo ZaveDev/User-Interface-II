@@ -1,1 +1,206 @@
-/* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap);/*font-family: 'Josefin Sans', sans-serif;*/
+@import url(https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap);/*font-family: 'Bungee Outline', cursive;*/
+@import url(https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap);/*font-family: 'Swanky and Moo Moo', cursive;*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+    vertical-align: baseline;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------------------my stuff here---------------------- */
+*{
+    /* border:1px solid grey;   */
+
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+img:hover{
+    cursor: pointer;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2.4rem;
+
+
+}
+header *{
+    margin: 1% 0;
+}
+header nav{
+    display: flex;
+    font-size: 1.6rem;
+    width: 40%;
+    align-items: stretch;
+
+}
+header nav a{
+    width: 25%;
+    text-align: center;
+    border: 4px solid #273538;
+    padding: 2% 0;
+    
+}
+header nav a:hover{
+    background: #273538;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+header p {
+    width:80%;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+section{
+    display: flex;
+}
+
+/* image section */
+#image {
+    display: flex;
+    background-color: #273538;
+}
+
+#image div{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    width: 60%;
+}
+#image h2{
+    font-size: 5vw;
+    text-align: center;
+    color: white;
+    font-family: 'Bungee Outline', cursive;
+}
+#image img{
+    width: 20%;
+    margin-left: 20%;
+}
+
+/* list section */
+#list {
+    display: flex;
+    flex-flow: row space-between;
+    padding: 1% 0;
+    font-size: 3rem;
+    font-family: 'Swanky and Moo Moo', cursive;
+    justify-content: space-between;
+    
+}
+#list div{
+    width: 15%;
+}
+#list div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#list #content{
+    width: 15%;
+    margin-right: 0.5%;
+    width: 30%;
+}
+
+
+/* footer section */
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4% 0;
+    background: goldenrod;
+    /* font-size: 2em; */
+}
+
+button{
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    header{ 
+        width: 100%;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    header nav a{
+        width: 100%; 
+    }
+    header p {
+        width:90%;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    #list{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #list div{
+        width:45%;
+        max-height: 200px;
+    }
+    #list #content{
+        font-size: 1.6rem;
+        width: 90%;
+    }
+
+}
+@media (max-width: 500px) {
+    #list div{
+        width:45%;
+        max-height: 150px;
+    }
+    #list #content{
+        font-size: 1.2rem;
+    }
+}
